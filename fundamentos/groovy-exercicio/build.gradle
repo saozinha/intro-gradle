@@ -1,5 +1,5 @@
 /*
-Exercicio - UNA
+
 GRUPO  : Bruno , Conceicao , Flavia e Edmar
 
 Vamos explorar as características Groovy mais relevantes para Gradle
@@ -47,7 +47,14 @@ task closures << {
 
 task lists << {
     // TODO: Declare uma lista com 5 strings
-    def String [] li = {"teste 1"; "Teste 2";"Teste 3";"Teste 4"};
-    // TODO: Print cada string com letras maiusculas
-     System.out.println(li[0].toUpperCase());
+    def List<String> li = new ArrayList<>();
+    li.add("teste1");
+    li.add("teste2");
+    li.add("teste3");
+    li.add("teste4");
+    li.add("teste5");
+    // TODO: Print cada string com letras maiusculas4
+    for (String t in li) {
+        System.out.println(t.toUpperCase());
+    }
 }
