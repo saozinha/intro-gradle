@@ -1,4 +1,6 @@
 /*
+Exercicio - UNA
+GRUPO  : Bruno , Conceicao , Flavia e Edmar
 
 Vamos explorar as características Groovy mais relevantes para Gradle
 build scripts. 
@@ -13,35 +15,39 @@ task stringsAndTypes << {
     // TODO: Rode `$ gradle sAT`
     println "Nice work abbreviating the task name"
 
-
     // TODO: Crie uma variável chamada foo e atribua a ela o valor 4.2
-
+    def val = 4.2;
     // TODO: Imprima o valor e a classe de foo
-
+    println(val);
     // TODO: Use interpolação de strings para exibir a raiz de 127
     // Dica: http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html
 
+    def raiz = Math.sqrt(127)
+    println ("Raiz de 127 =  $raiz")
     // TODO: Atribua a data corrente para foo e a imprima, com o seu tipo logo a seguir.
     // Dica: http://docs.oracle.com/javase/7/docs/api/java/util/package-summary.html
 
+
     // TODO: Utilize substring para extrair Jeremy da seguinte string:
     def hello = "Hello, Jeremy.";
-
-    
+    hello = hello.substring(6);
+    println("Extraido = $hello");
 
 }
 
 task closures << {
     // TODO: Declare uma closure que pega dois argumentos e os soma.
+    def foo = MyClouseres(3 ,5 , soma);
     // DICA: http://www.groovy-lang.org/closures.html
 
     // TODO: Chama sua closure com os argumentos 17 e 25, e imprima o resultado.
     // Cuidado: `println addTwo 17, 25` é ambíguo.
+    println(foo);
 }
 
 task lists << {
     // TODO: Declare uma lista com 5 strings
-
+    def String [] li = {"teste 1"; "Teste 2";"Teste 3";"Teste 4"};
     // TODO: Print cada string com letras maiusculas
-
+     System.out.println(li[0].toUpperCase());
 }
